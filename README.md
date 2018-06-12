@@ -5,7 +5,8 @@ Oracle Cloud Infrstructure  Visualization Tool
 
 <b>Overview</b>
 
-OCI Visualizer is a tool to visualize an OCI tenancy primarily from a network perspective. The tool was created mainly for the purpose of better understanding the OCI network model. As  a great believer in API first and visualization, I thought that the best way to learn a product is  to combine the two and build a visualization tool.
+OCI Visualizer is a tool to visualize an OCI tenancy primarily from a network perspective. The tool was created mainly for the purpose of better understanding the OCI network model. As  a great believer in API first and visualization, I thought that the best way to learn a product is  to combine the two and build a visualization tool. 
+The inspiration for the tool came after I saw a demo of <a href="https://duo.com/blog/introducing-cloudmapper-an-aws-visualization-tool">Duo Security CloudMapper.</a>
 
 <b>How it works?</b>
 - First visualizer extracts the network data for all VCNs and other cloud resources in an OCI compartment and generates  a json data structure . This is done using a Python script leveraging the OCI  Python SDK and exposed as a flask REST service.
