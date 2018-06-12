@@ -84,7 +84,7 @@ Both the extraction script and the web app run on top of python <a href="http://
 		     defined by your profile.
 		     if you want to visualize a spcific compartment then use the compartment request parameter.
 	
-		example: http://localhost:8000/ociviz.html?proxy=<proxy url>&profile=<your profile>&cpmpartment=<your compartament name>
+example: http://localhost:8000/static/ociviz.html?proxy=<proxy url>&profile=<your profile>&compartment=<your compartament name>
 
 
 8. If you haven't launched Visualizer with a compartment parameter, then Select the compartment to visualize. 
