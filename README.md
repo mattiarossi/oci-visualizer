@@ -88,8 +88,20 @@ Both the extraction script and the web app run on top of python <a href="http://
    server, that runs a python based script to collects all the OCI information required to visualize the compartment. this process might take some time dependeing
    on the complexity of the compartment
 
-9. <b>What can I do when visualizing a VCN:<b>
-	-  Click on a node or edge to dy a node or edge properties -
+9. <b>What do I see on the diagram ?<b>
+ 	- Subnets may be drawn with a gree or red border - Red is for Private subnet while green is for  Public subnets
+	- Blue edges repesent routes from a subnet to other subnet/DRG/Local Peering ...
+	- Green edges represent ingress security rules for the subnet. Note that egress are not yet implemented
+	- Load balancers will have edges pointing to the instances defined in the backend sets. For public load balancer 
+	  they will appear in both public subnets , but only one will have edges pointing to the backend set.	
+	
+	
+10. <b>What can I do when visualizing a VCN:<b>
+	-
+	-  Click on a node or edge to display a node or edge properties -
 	- Check/unckeck the Routes to show/hide route table based edges
-	- Check/unckeck the SecRules  to show/ihde edges based on Security rules
+	- Check/unckeck the SecRules  to show/hide edges based on Security rules
+	= Check/Unchek the Instances to show/hide instances on the diagram
+	- Right click a subnet and dispaly the route table or security rules for that subnet
+	- Right click an Instance and display the Attached VNICs or Attached Block Volumes
 
