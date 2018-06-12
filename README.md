@@ -60,7 +60,7 @@ Both the extraction script and the web app run on top of python <a href="http://
 	$ flask run --port 8000
 
 7. <b>Launch the visualizer UI</b>
-	- Point your browser to  http://localhost:8000/ociviz.html . 
+	- Point your browser to  http://localhost:8000/static/ociviz.html . 
 	- You can use http request parameters to control how Visualizer is launched. the following parameters are available:
 	
 		- <b>'proxy' </b>- if you're behind a firewall and need to use a proxy:
