@@ -101,7 +101,7 @@ Both the extraction script and the web app run on top of python <a href="http://
 	-  Click on a node or edge to display a node or edge properties -
 	- Check/unckeck the Routes to show/hide route table based edges
 	- Check/unckeck the SecRules  to show/hide edges based on Security rules
-	= Check/Unchek the Instances to show/hide instances on the diagram
+	- Check/Unchek the Instances to show/hide instances on the diagram
 	- Right click a subnet and dispaly the route table or security rules for that subnet
 	- Right click an Instance and display the Attached VNICs or Attached Block Volumes
 
