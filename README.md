@@ -92,7 +92,7 @@ Both the extraction script and the web app run on top of python <a href="http://
    OCI information required to visualize the compartment. this process might take some time depending on the complexity 
    of the compartment
 
-9. <b>What do I see on the diagram ?<b>
+9. <b>What do I see on the diagram ?</b>
  	- Subnets may be drawn with a gree or red border - Red is for Private subnet while green is for  Public subnets
 	- Blue edges repesent routes from a subnet to other subnet/DRG/Local Peering ...
 	- Green edges represent ingress security rules for the subnet. Note that egress are not yet implemented
@@ -100,7 +100,7 @@ Both the extraction script and the web app run on top of python <a href="http://
 	  they will appear in both public subnets , but only one will have edges pointing to the backend set.	
 	
 	
-10. <b>What can I do when visualizing a VCN:<b>
+10. <b>What can I do when visualizing a VCN:</b>
 	-
 	-  Click on a node or edge to display a node or edge properties -
 	- Check/unckeck the Routes to show/hide route table based edges
