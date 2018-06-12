@@ -101,7 +101,7 @@ will lunch visualizer without a proxy, will use the DEFAULT profile in the OCI c
 
   http://localhost:8000/static/ociviz.html?mode=OFFLINE
   
-will lunch visualizer without in offline mode. Visualizer expects to find a file called "network.json" in static folder and will visualize its contents
+will lunch visualizer  in OFFLINE mode. Visualizer expects to find a file called "network.json" in static folder and will visualize its contents
 
 <b>example 4:</b> 
 
