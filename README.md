@@ -16,7 +16,7 @@ I was inspired by <a href="https://duo.com/blog/introducing-cloudmapper-an-aws-v
 Both the extraction script and the web app run on top of python <a href="http://flask.pocoo.org/">Flask</a>
 
 <p align="center">
-  <img src="oci_visuslizer.png" width="350"/>
+  <img src="oci_visuslizer.png" width="600"/>
 </p>
 
 
