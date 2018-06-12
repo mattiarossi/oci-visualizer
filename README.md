@@ -97,20 +97,26 @@ will launch visualizer using a proxy at myproxy.com:80 and visualize compartment
 will lunch visualizer without a proxy, will use the DEFAULT profile in the OCI config file and will display a list of compartments for that profile.
 
 
+<b>example 3:</b> 
 
-8. If you haven't launched Visualizer with a compartment parameter, then Select the compartment to visualize. 
-   Visualizer will then issue a REST call to the flask server. The REST invokes a python based script to collect all the
-   OCI information required to visualize the compartment. this process might take some time depending on the complexity 
-   of the compartment
+  http://localhost:8000/static/ociviz.html?mode=OFFLINE
+  
+will lunch visualizer without in offline mode. Visualizer expects to find a file called "network.json" in static folder and will visualize its contents
 
-9. <b>What do I see on the diagram ?</b>
+<b>example 4:</b> 
+
+  http://localhost:8000/static/ociviz.html?mode=FILE
+  
+will lunch visualizer and will write a file named "network_mycompartment.json' in the static folder, whenever I visualize a compartment 
+
+8. <b>What do I see on the diagram ?</b>
  	- Subnets may be drawn with a gree or red border - Red is for Private subnet while green is for  Public subnets
 	- Blue edges repesent routes from a subnet to other subnet/DRG/Local Peering ...
 	- Green edges represent ingress security rules for the subnet. Note that egress are not yet implemented
 	- Load balancers will have edges pointing to the instances defined in the backend sets. For public load balancer 
 	  they will appear in both public subnets , but only one will have edges pointing to the backend set.	
 
-10. <b>What can I do when visualizing a VCN:</b>
+9. <b>What can I do when visualizing a VCN:</b>
 	-
 	-  Click on a node or edge to display a node or edge properties -
 	- Check/unckeck the Routes to show/hide route table based edges
