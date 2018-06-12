@@ -111,6 +111,7 @@ will launch oci-visualizer  in OFFLINE mode. oci-visualizer expects to find a fi
 will launch oci-visualizer and will write a file named "network_mycompartment.json' in the static folder, whenever I visualize a compartment 
 
 8. <b>What do I see on the diagram ?</b>
+	- You can visualize one VCN at a time or select 'All' in the VCNs dropdown to display all VCNs in the compartment.
  	- Subnets may be drawn with a gree or red border - Red is for Private subnet while green is for  Public subnets
 	- Blue edges repesent routes from a subnet to other subnet/DRG/Local Peering ...
 	- Green edges represent ingress security rules for the subnet. Note that egress are not yet implemented
