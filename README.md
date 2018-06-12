@@ -98,8 +98,7 @@ Both the extraction script and the web app run on top of python <a href="http://
 	- Green edges represent ingress security rules for the subnet. Note that egress are not yet implemented
 	- Load balancers will have edges pointing to the instances defined in the backend sets. For public load balancer 
 	  they will appear in both public subnets , but only one will have edges pointing to the backend set.	
-	
-	
+
 10. <b>What can I do when visualizing a VCN:</b>
 	-
 	-  Click on a node or edge to display a node or edge properties -
