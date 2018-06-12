@@ -9,7 +9,7 @@ OCI Visualizer is a tool to visualize an OCI tenancy primarily from a network pe
 I was inspired by <a href="https://duo.com/blog/introducing-cloudmapper-an-aws-visualization-tool">Duo Security CloudMapper.</a> a visualization tool for AWS.  
 
 <b>How it works?</b>
-- First visualizer extracts the network data for all VCNs and other cloud resources in an OCI compartment and generates  a json data structure . This is done using a Python script leveraging the OCI  Python SDK and exposed as a flask REST service.
+- First oci-visualizer extracts the network data for all VCNs and other cloud resources in an OCI compartment and generates  a json data structure . This is done using a Python script leveraging the OCI  Python SDK and exposed as a flask REST service.
 
 - Visualize the data generated in step 1 using a small web app, leveraging  <a href="http://js.cytoscape.org/">cystoscape.js</a> , an open source graph visualization framework. 
 
@@ -60,13 +60,13 @@ Both the extraction script and the web app run on top of python <a href="http://
 	$ export FLASK_APP=ocivizserver.py 
 	$ flask run --port 8000
 
-7. <b>Launch the visualizer UI</b>
+7. <b>Launch the oci-visualizer UI</b>
 	- Point your browser to  http://localhost:8000/static/ociviz.html . 
-	- You can use http request parameters to control how Visualizer is launched. the following parameters are available:
+	- You can use http request parameters to control how oci-visualizer is launched. the following parameters are available:
 	
 		- <b>'proxy' </b>- if you're behind a firewall and need to use a proxy:
 		
-		- <b>'profile'</b> - By default, Visualizer will use the DEFAULT profile on your config file. If you want
+		- <b>'profile'</b> - By default, oci-visualizer will use the DEFAULT profile on your config file. If you want
 		   to use a different  profile then provide a profile parameter in the request url.
 		
 		- <b>'mode'</b> - 
@@ -81,7 +81,7 @@ Both the extraction script and the web app run on top of python <a href="http://
 			 <b>'FILE'</b> : to generate a file that can be viewed OFFLINE. The network file will be generated 
 			     in the static folder with name "network_<compartmentname>.json"	
 			     
-		- <b>'compartment'</b> - When Visualizer is launched, it will retrieve all compartments in the tenancy 
+		- <b>'compartment'</b> - When oci-visualizer is launched, it will retrieve all compartments in the tenancy 
 		     defined by your profile.
 		     if you want to visualize a spcific compartment then use the compartment request parameter.
 	
@@ -89,26 +89,26 @@ Both the extraction script and the web app run on top of python <a href="http://
 
   http://localhost:8000/static/ociviz.html?proxy=myproxy.com:80&profile=myprofile&compartment=mycompartment
 
-will launch visualizer using a proxy at myproxy.com:80 and visualize compartment mycompartment. access to the OCI will be done the myprofile section in the config file at ~/.oci/config
+will launch oci-visualizer using a proxy at myproxy.com:80 and visualize compartment mycompartment. access to the OCI will be done the myprofile section in the config file at ~/.oci/config
 
 <b>example 2:</b> 
 
   http://localhost:8000/static/ociviz.html
   
-will lunch visualizer without a proxy, will use the DEFAULT profile in the OCI config file and will display a list of compartments for that profile.
+will launch oci-visualizer without a proxy, will use the DEFAULT profile in the OCI config file and will display a list of compartments for that profile.
 
 
 <b>example 3:</b> 
 
   http://localhost:8000/static/ociviz.html?mode=OFFLINE
   
-will lunch visualizer  in OFFLINE mode. Visualizer expects to find a file called "network.json" in static folder and will visualize its contents
+will launch oci-visualizer  in OFFLINE mode. oci-visualizer expects to find a file called "network.json" in static folder and will visualize its contents
 
 <b>example 4:</b> 
 
   http://localhost:8000/static/ociviz.html?mode=FILE
   
-will lunch visualizer and will write a file named "network_mycompartment.json' in the static folder, whenever I visualize a compartment 
+will launch oci-visualizer and will write a file named "network_mycompartment.json' in the static folder, whenever I visualize a compartment 
 
 8. <b>What do I see on the diagram ?</b>
  	- Subnets may be drawn with a gree or red border - Red is for Private subnet while green is for  Public subnets
